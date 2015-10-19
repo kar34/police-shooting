@@ -22,6 +22,7 @@ var getData = function() {
 	$.ajax({  
 		url: ('data/response.json'),
 		type:"get",
+		dataType: "json",
 		success: function(data) { customBuild(data); }
 	});
 
