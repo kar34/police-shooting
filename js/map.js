@@ -20,7 +20,7 @@ var getData = function() {
 
     // Execute an AJAX request to get the data in data/response.js
 	$.ajax({  
-		url: ('../data/response.json'),
+		url: ('data/response.json'),
 		type:"get",
 		success: function(data) { customBuild(data); }
 	});
@@ -97,7 +97,7 @@ var customBuild = function(data) {
 
 		// Creates point at crime location and adds appropriate layer
 		if (status == "Hit") 
-			var circle = new L.circle([latitude, longitude], 500, { color: "#000000", fillColor: "#000000"}).addTo(hitLayer).bindPopup(moreInfo);
+			var circle = new L.circle([latitude, longitude], 500, {color: "#000000", fillColor: "#000000"}).addTo(hitLayer).bindPopup(moreInfo);
 		else
 			var circle = new L.circle([latitude, longitude], 500, {color: "#FF0000", fillColor: "#FF0000"}).addTo(killLayer).bindPopup(moreInfo);
 	}
