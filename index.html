@@ -1,7 +1,7 @@
 <!doctype html>
 
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,7 @@
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    
+
     <!-- leaflet libraries -->
     <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
@@ -19,18 +19,48 @@
     <!-- Custom files -->
     <script type="text/javascript" src="js/map.js"></script>
     <link rel="stylesheet" href="css/main.css"/>
-   
-  </head>
-  <body>
-    <!-- You may want to put your title and additional informaiton here -->
-    <div class="container">
-      <!-- This is the div that your map will go in.  You'll need to reference its id -->
-      <div id="container"></div>
+</head>
+
+<body>
+    <div id="header"> 
+        <h1 class="center">Police shootings</h1>
+        <br>
+        <div class="container">
+            <table class="table">
+                <tr>
+                    <th></th>
+                    <th>Men</th>
+                    <th>Women/unspecified</th>
+                </tr>
+                <tr>
+                    <th>White</th>
+                    <td id="whiteMale"></td>
+                    <td id="whiteFemale"></td>
+                </tr>
+                <tr>
+                    <th>Non-white</td>
+                    <td id="nwMale"></td>
+                    <td id="nwFemale"></td>
+                </tr>
+            </table>
+        </div>
+
+        <p class="center">This map shows crowdsourced police shooting data from <a href="http://regressing.deadspin.com/deadspin-police-shooting-database-update-were-still-go-1627414202">deadspin</a>. Circle indicates if the victim was <span class="bold">hit</span> or <span class="red bold">killed</span>. Click each point for details.</p>
     </div>
+
+    <div class="container">
+        <!-- This is the div that your map will go in.  You'll need to reference its id -->
+        <div id="map"></div>
+    </div>
+
     <script>
-      
-      // This is where you should execute your drawMap function
-      
-    </script>
-  </body>
+
+        // This is where you should execute your drawMap function
+        drawMap();
+
+    </script>   
+
+
+
+</body>
 </html>
